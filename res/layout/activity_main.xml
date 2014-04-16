@@ -1,0 +1,170 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/unselected_tab_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/current_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:height="38dp"
+            android:text="MIRROR"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/current_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="JUSTIN TIMBERLAKE"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/selected_tab_bg"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+	
+	 <TabHost
+	     android:id="@android:id/tabhost"
+	     android:layout_width="match_parent"
+	     android:layout_height="fill_parent"
+	     android:layout_weight="1" >
+  
+	   <LinearLayout  
+	     android:layout_width="match_parent"  
+	     android:layout_height="wrap_content"  
+	     android:orientation="vertical" >  
+	
+	     <TabWidget
+	         android:id="@android:id/tabs"
+	         android:layout_width="match_parent"
+	         android:layout_height="32dp"
+	         android:background="@color/unselected_tab_bg"
+	         android:divider="@color/unselected_tab_bg" >
+	  
+	     </TabWidget>
+  
+	     <FrameLayout
+	         android:id="@android:id/tabcontent"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
+	         android:background="@color/white"
+	         android:paddingBottom="1dp"
+	         android:paddingTop="1dp" >
+  
+	           <FrameLayout  
+	             android:id="@+id/playlist"
+	             android:layout_width="match_parent"  
+	             android:layout_height="wrap_content"  
+	             android:visibility="gone">
+	           		    <ListView android:id="@+id/listView" 
+	           		      android:background="@color/unselected_tab_bg"
+			              android:layout_height="match_parent"
+			              android:layout_width="match_parent"/>
+	           </FrameLayout>  
+	           <FrameLayout  
+	             android:id="@+id/player"  
+	             android:layout_width="match_parent"  
+	             android:layout_height="wrap_content"  
+	             android:visibility="gone" />  
+	           <FrameLayout  
+	             android:id="@+id/library"  
+	             android:layout_width="match_parent"  
+	             android:layout_height="wrap_content"  
+	             android:visibility="gone" />  
+	     </FrameLayout>  
+	     <android.support.v4.view.ViewPager  
+	       xmlns:android="http://schemas.android.com/apk/res/android"  
+	       android:id="@+id/pager"  
+	       android:layout_width="match_parent"  
+	       android:layout_height="wrap_content"/>
+  
+	   </LinearLayout>  
+	 </TabHost>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/unselected_tab_bg"
+            android:paddingTop="20dp" >
+
+            <ImageButton
+                android:id="@+id/btnPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="10dp"
+                android:src="@drawable/button_previous_song" />
+
+            <ImageButton
+                android:id="@+id/btnBackward"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/button_seek_backward" />
+
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/btn_play" />
+
+            <ImageButton
+                android:id="@+id/btnForward"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/button_seek_forward" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingRight="10dp"
+                android:src="@drawable/button_next_song" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekerBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/unselected_tab_bg"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
+            android:progressDrawable="@color/selected_tab_bg"
+            android:thumb="@drawable/button_seeker_handle"
+            android:thumbOffset="2dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

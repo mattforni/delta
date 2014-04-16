@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">del</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_library">LIBRARY</string>
+    <string name="title_player">PLAYER</string>
+    <string name="title_playlist">PLAYLIST</string>
+    <color name="unselected_tab_bg">#000000</color>
+    <color name="selected_tab_bg">#2a2a2a</color>
+    <color name="white">#FFFFFF</color>
+    
+
+</resources>
